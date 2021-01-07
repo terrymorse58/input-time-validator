@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Input Time Element</title>
+  <style>
+      form {
+          border: 1px solid black;
+          max-width: 30rem;
+          margin: 1rem 0;
+          padding: 0.5rem;
+      }
+  </style>
+</head>
+<body>
+<h1>Validate a form's degraded time inputs</h1>
+
+<p>Some browsers do not support <code>&lt;input type="time"></code>,
+  degrading it to <code>&lt;input type="text"></code>.</p>
+
+<p>This script detects these degraded inputs and
+  validates them accordingly.</p>
+
+<form id="formtime">
+  <label for="timeinput">Time input (min 09:30, max: 14:00):</label>
+  <input id="timeinput"
+         type="time"
+         min="09:30"
+         max="14:00"
+         placeholder="hh:mm AM/PM"
+  />
+  <button type="submit">Submit</button>
+</form>
+<form id="formtext">
+  <label for="degraded">Text input (min 09:30, max: 14:00):</label>
+  <input id="degraded"
+         type="text"
+         min="09:30"
+         max="14:00"
+         style="width: 5rem"
+         placeholder="hh:mm AM/PM"
+  />
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  // the "real" form submits
+  const timeForm = document.getElementById('formtime');
+  timeForm.onsubmit = function () {
+    alert('time form was submitted');
+  };
+  const textForm = document.getElementById('formtext');
+  textForm.onsubmit = function () {
+    alert('text form was submitted');
+  };
+</script>
+
+<script src="inputTimeVal.js"></script>
+</body>
+</html>
+
