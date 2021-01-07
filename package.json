@@ -1,7 +1,7 @@
 {
   "name": "input-time-validator",
-  "version": "1.0.0",
-  "description": "validate all input time elements",
+  "version": "1.0.1",
+  "description": "min/max validation form HTML time inputs, including inputs that are not supported natively",
   "main": "inputTimeVal.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

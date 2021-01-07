@@ -51,7 +51,7 @@
     show (input, message) {
       const {top, right, bottom, left} = input.getBoundingClientRect();
       const overlay = this.overlay;
-      overlay.style.top = Math.round(top - 34) + 'px';
+      overlay.style.top = Math.round(top - 34 + window.scrollY) + 'px';
       overlay.style.left = Math.round(left) + 'px';
       overlay.innerText = message;
       overlay.style.display = 'block';
