@@ -1,6 +1,6 @@
 # input-time-validator
 
-Add `min` and `max` time validation to `<input type="time">` elements.
+A cross-browser polyfill for `min` and `max` time validation to `<input type="time">`elements.
 
 ![imput time validator](docs/input-time.gif "inpt time validator")
 
