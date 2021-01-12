@@ -2,10 +2,12 @@
 
 Add `min` and `max` time validation to `<input type="time">` elements.
 
+![imput time validator](docs/input-time.gif "inpt time validator")
+
 ## The Problem
 
 Some browsers do not support the input time element,
-but degrade them to an input text element.
+but degrade them to an input text element, which may longer be validated.
 
 This input:
 ```html
